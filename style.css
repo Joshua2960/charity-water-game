@@ -1,1 +1,187 @@
-/* Replace with the CSS from our conversation */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4fbfd;
+  color: #1f2933;
+}
+
+.game-container {
+  max-width: 950px;
+  margin: 30px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.brand-header {
+  background: white;
+  border: 3px solid #ffc907;
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+h1 {
+  margin: 0;
+  color: #0077b6;
+  font-size: 3rem;
+}
+
+.subtitle {
+  margin: 8px 0 0;
+  color: #555;
+}
+
+.logo-box {
+  width: 130px;
+  height: 90px;
+  border: 2px dashed #ffc907;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff8d6;
+}
+
+.logo-box img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.info-card {
+  background: #e8f7ff;
+  border-left: 6px solid #0077b6;
+  margin: 20px 0;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.info-card p {
+  margin: 5px;
+}
+
+.controls {
+  margin: 20px 0;
+}
+
+button {
+  background: #ffc907;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #ffb703;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  flex-wrap: wrap;
+  font-weight: bold;
+}
+
+#message {
+  font-size: 1.1rem;
+  font-weight: bold;
+  min-height: 25px;
+}
+
+#grid {
+  display: grid;
+  gap: 4px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.tile {
+  width: 36px;
+  height: 36px;
+  background: #00a6fb;
+  border: 2px solid #0077b6;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.tile:hover {
+  background: #48cae4;
+}
+
+.tile.revealed {
+  background: #caf0f8;
+  border-color: #90e0ef;
+  cursor: default;
+}
+
+.tile.polluted {
+  background: #6c584c;
+  color: white;
+}
+
+.tile.flagged {
+  background: #ffc907;
+}
+
+.tile.clean-empty {
+  background: #dff6f0;
+}
+
+.num-1 {
+  color: #0077b6;
+}
+
+.num-2 {
+  color: #2d6a4f;
+}
+
+.num-3 {
+  color: #d62828;
+}
+
+.num-4 {
+  color: #5a189a;
+}
+
+.num-5 {
+  color: #bc6c25;
+}
+
+.num-6,
+.num-7,
+.num-8 {
+  color: #111;
+}
+
+@media (max-width: 700px) {
+  .brand-header {
+    flex-direction: column;
+  }
+
+  .tile {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 2.3rem;
+  }
+}

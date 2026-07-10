@@ -1,40 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Clean Path</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clean Path</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<main class="game-container">
-<header class="brand-header">
-<div>
-<h1>Clean Path</h1>
-<p class="subtitle">Find the clean path. Avoid polluted water.</p>
-</div>
-<div class="logo-box">
-<img src="images/charity-water-logo.png" alt="Charity: Water logo">
-</div>
-</header>
-<section class="info-card">
-<p>Left click to reveal a tile.</p>
-<p>Right click to flag polluted water.</p>
-</section>
-<div class="controls">
-<button onclick="startGame('easy')">Easy</button>
-<button onclick="startGame('medium')">Medium</button>
-<button onclick="startGame('hard')">Hard</button>
-</div>
-<div class="stats">
-<p>Lives: <span id="lives">3</span></p>
-<p>Flags: <span id="flags">0</span></p>
-<p>Win Streak: <span id="streak">0</span></p>
-<p>Difficulty: <span id="difficulty">Easy</span></p>
-</div>
-<p id="message">Choose a difficulty to start!</p>
-<div id="grid"></div>
-</main>
-<script src="script.js"></script>
+  <main class="game-container">
+    <header class="brand-header">
+      <div>
+        <h1>Clean Path</h1>
+        <p class="subtitle">A Charity: Water inspired Minesweeper prototype</p>
+      </div>
+
+      <div class="logo-box">
+        <img src="images/charity-water-logo.png" alt="Charity Water logo">
+      </div>
+    </header>
+
+    <section class="info-card">
+      <p>Left click to reveal a tile.</p>
+      <p>Right click to flag polluted water.</p>
+    </section>
+
+    <div class="controls">
+      <button onclick="startGame('easy')">Easy</button>
+      <button onclick="startGame('medium')">Medium</button>
+      <button onclick="startGame('hard')">Hard</button>
+    </div>
+
+    <div class="stats">
+      <p>Lives: <span id="lives">3</span></p>
+      <p>Flags: <span id="flags">0</span></p>
+      <p>Win Streak: <span id="streak">0</span></p>
+      <p>Difficulty: <span id="difficulty">Easy</span></p>
+    </div>
+
+    <p id="message">Choose a difficulty to start!</p>
+
+    <div id="grid"></div>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
