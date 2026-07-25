@@ -5,6 +5,8 @@ const streakDisplay = document.getElementById("streak");
 const difficultyDisplay = document.getElementById("difficulty");
 const message = document.getElementById("message");
 
+let currentDifficulty = "easy";
+
 const difficulties = {
   easy: {
     size: 10,
@@ -30,8 +32,11 @@ let revealedCount = 0;
 let gameOver = false;
 
 function startGame(difficulty) {
-  size = difficulties[difficulty].size;
-  pollutedCount = difficulties[difficulty].polluted;
+  currentDifficulty = difficulty;
+
+  size = difficulties[currentDifficulty].size;
+  pollutedCount = difficulties[currentDifficulty].polluted;
+
   lives = 3;
   flagsUsed = 0;
   revealedCount = 0;
@@ -42,9 +47,11 @@ function startGame(difficulty) {
   flagsDisplay.textContent = flagsUsed + " / " + pollutedCount;
   streakDisplay.textContent = winStreak;
   difficultyDisplay.textContent =
-    difficulty.charAt(0).toUpperCase() + difficulty.slice(1);
+    currentDifficulty.charAt(0).toUpperCase() +
+    currentDifficulty.slice(1);
 
-  message.textContent = "Find the clean path and avoid polluted water.";
+  message.textContent =
+    "Find the clean path and avoid polluted water.";
 
   grid.innerHTML = "";
   grid.style.gridTemplateColumns = `repeat(${size}, 36px)`;
@@ -53,6 +60,9 @@ function startGame(difficulty) {
   placePollutedWater();
   calculateNumbers();
   drawBoard();
+}
+function restartGame() {
+  startGame(currentDifficulty);
 }
 
 function createBoard() {
@@ -247,3 +257,4 @@ function isInsideBoard(row, col) {
 }
 
 startGame("easy");
+

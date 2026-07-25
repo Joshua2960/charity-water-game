@@ -9,15 +9,22 @@
 <body>
   <main class="game-container">
     <header class="brand-header">
-      <div>
-        <h1>Clean Path</h1>
-        <p class="subtitle">A Charity: Water inspired Minesweeper prototype</p>
-      </div>
+  <div>
+    <div class="title-row">
+      <h1>Clean Path</h1>
+      <span class="title-droplet">💧</span>
+    </div>
 
-      <div class="logo-box">
-        <img src="images/charity-water-logo.png" alt="Charity Water logo">
-      </div>
-    </header>
+    <p class="subtitle">A Charity: Water inspired web game</p>
+  </div>
+
+  <div class="logo-box">
+    <img
+      src="images/charity-water-logo.png"
+      alt="Charity Water logo"
+    >
+  </div>
+</header>
 
     <section class="info-card">
       <p>Left click to reveal a tile.</p>
@@ -28,6 +35,10 @@
       <button onclick="startGame('easy')">Easy</button>
       <button onclick="startGame('medium')">Medium</button>
       <button onclick="startGame('hard')">Hard</button>
+    </div>
+    
+    <div class="restart-container">
+    <button onclick="restartGame()">🔄 Restart Game</button>
     </div>
 
     <div class="stats">
@@ -43,5 +54,13 @@
   </main>
 
   <script src="script.js"></script>
+   <footer class="site-footer">
+    <p>
+        💧 Want to make a real-world impact?
+        <a href="https://www.charitywater.org/" target="_blank" rel="noopener noreferrer">
+            Visit Charity: Water and help provide clean water today →
+        </a>
+    </p>
+</footer>
 </body>
 </html>
